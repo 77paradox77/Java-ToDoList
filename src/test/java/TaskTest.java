@@ -4,7 +4,12 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class TaskTest {
+    @After
+    public void tearDown() {
+      Task.clear();
+    }
 
+// POSSIBILY MAY NOT NEED
   @Rule
   public ClearRule clearRule = new ClearRule();
 
@@ -61,7 +66,7 @@ public class TaskTest {
   @Test
   public void clear_emptiesAllTasksFromArrayList_0() {
     Task myTask = new Task("Mow the lawn");
-    Task.clearTasksArray();
+    Task.clear();
     assertEquals(Task.all().size(), 0);
   }
 }

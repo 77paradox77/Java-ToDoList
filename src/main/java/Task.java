@@ -49,7 +49,7 @@ public class Task {
     }
   }
 
-  public static void clearTasksArray() {
+  public static void clear() {
 
     //METHOD BELOW IS A BUILT IN METHOD
     instances.clear();
